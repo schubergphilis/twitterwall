@@ -1,0 +1,13 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="10">
+<title>Beyond Cupfighting Twitterwall</title>
+</head>
+<body>
+<ul>
+{% for tweet in tweets %}
+<li>{{ tweet.message_origin }}@{{ tweet.message_date }} : {{ tweet.message_text }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>

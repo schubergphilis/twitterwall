@@ -1,0 +1,135 @@
+body {
+	background: url(images/tweetbg.png) no-repeat;
+	background-size: 100%;
+    margin: 0;
+    padding: 0;
+	font-family: Myriad Pro,Arial,Helvetica,FreeSans,sans-serif;
+	font-size: 2em;
+}
+
+hr {
+	color:#c00;
+	background-color:#cccccc;
+	height:1px;
+	border:none;
+	width: 40%;
+	align: middle;
+	margin: 2px;
+}
+
+/* top bar styles */
+
+
+
+
+
+.topbar {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px;
+	padding: 0px;
+	z-index: 1000;
+	height: 80px;
+	position: fixed;
+}
+
+.topcontainer {
+	width: 90%;
+	margin: 0 auto;
+	height: 80px;
+}
+
+.topbarItem{
+	display:block;
+	margin:0 auto;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+/* message list */
+
+.wrapper {
+    margin: 0px auto;
+    text-align: left;
+    width: 90%;
+	/* background: url("images/wash-white-30.png") repeat scroll 0 0 transparent; */
+	height: 100%;
+	position: relative;
+	-moz-box-shadow: 0 0 2px 3px rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 0 2px 3px rgba(0,0,0,.25);
+}
+
+.msglist {
+	overflow-y:hidden;
+	position: absolute;
+	bottom: 0px;
+	top: 80px;
+	width: 100%;
+
+}
+.msgcontainer {
+	margin: 15px;
+	border: 1px solid #BBBBBB;
+    border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+	background-color: #FFFFFF;
+    padding: 1em;
+}
+.msgtitle {
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+.title {
+    float:left;
+    color: #064a71;
+    font-size: 38px;
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+}
+.avatar{
+    float:left;
+    width: 48px;
+    height:48px;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-right: 10px;
+    line-height: 48px;
+}
+.time {
+    float: right;
+    height: 56px;!important
+
+
+    text-decoration: none;
+    vertical-align: text-bottom;
+}
+.timeago{
+    float: right;
+    color: #064a71;
+    font-size: 26px;
+}
+.msg{
+    clear: both;
+    border-top: 1px solid #BBBBBB;
+    margin-left: 58px;
+}
+
+.embedded_media {
+   margin-top: 10px;
+   border-radius:5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   max-height: 200px;
+}

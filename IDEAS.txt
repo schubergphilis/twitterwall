@@ -4,3 +4,5 @@ Show the latest linked web page from the tweet feed
 
 Add support for multiple feeds (events) into the same database and
 allow any (group) of them to be displayed.
+
+Make it work in Chrome

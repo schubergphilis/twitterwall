@@ -11,15 +11,13 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
-
 # Django settings for twitterwall project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Gert Kremer', 'gkremer@schubergphilis.com'),
-    ('Roel Gerrits', 'rgerrits@schubergphilis.com'),
+    ('root', 'root@localhost'),
 )
 
 MANAGERS = ADMINS

@@ -48,26 +48,26 @@ will provide usage information when started.
 The twitter credentials are stored in a separate file which
 has the following format:
 
-[auth]
-class=OAuth
-
-[auth_parameters]
-token=<app token>
-token_secret=<app_secret>
-consumer_key=<consumer_key
-consumer_secret=<consumer_secret>
+[auth]  
+class=OAuth  
+  
+[auth_parameters]  
+token=<app token>  
+token_secret=<app_secret>  
+consumer_key=<consumer_key>  
+consumer_secret=<consumer_secret>  
 
 
 Next to OAuth (which is the recommended way to authenticate), the feed
 script also supports "UserPassAuth", which takes "username" and "password"
 as parameters:
 
-[auth]
-class=UserPassAuth
-
-[auth_parameters]
-username=<user>
-password=<pass>
+[auth]  
+class=UserPassAuth  
+  
+[auth_parameters]  
+username=<user>  
+password=<pass>  
 
 
 

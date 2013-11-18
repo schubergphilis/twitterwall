@@ -21,9 +21,14 @@ with all CRUD operations for tweets.
 installation
 ------------
 Being a django application, you'll need a system with
-Django installed. There is a requirements.txt in the
-root of the project to help you install Django and twitter
-using pip.
+Django installed. 
+
+Start by installing python-setuptools and python-pip, which can be
+done on an Ubuntu/Debian system like:
+sudo apt-get install  python-setuptools python-pip
+
+There is a requirements.txt in the root of the project to help you 
+install Django and twitter using pip.
 
 It is recommended to install the project in /opt/twitterwall. If you
 install it elsewhere, there are some paths in settings.py that need 
@@ -38,6 +43,10 @@ Use the manage.py script to:
     python manage.py collectstatic
 - Run the application standalone:
     python manage.py runserver
+
+When running twitterwall using a WSGI compliant http server, make sure that
+the UID running this server has write rights on the database (default:
+  /opt/twitterwall/db/tweets.db).
 
 twitterfeed
 -----------

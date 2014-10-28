@@ -30,14 +30,14 @@ hr {
 	margin: 0px;
 	padding: 0px;
 	z-index: 1000;
-	height: 80px;
+	height: 130px;
 	position: fixed;
 }
 
 .topcontainer {
 	width: 90%;
 	margin: 0 auto;
-	height: 80px;
+	height: 130px;
 }
 
 .topbarItem{
@@ -70,7 +70,7 @@ hr {
 	overflow-y:hidden;
 	position: absolute;
 	bottom: 0px;
-	top: 80px;
+	top: 130px;
 	width: 100%;
 
 }

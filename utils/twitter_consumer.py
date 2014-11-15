@@ -56,23 +56,30 @@ cfg=ConfigParser()
 cfg.read(parameters.auth)
 auth_type = cfg.get("auth","class")
 auth_parameters=dict(cfg.items("auth_parameters"))
-
 auth_obj = locals()[auth_type](**auth_parameters)  # create instance of auth_type (class)
 
 # main loop
-stream = TwitterStream(auth=auth_obj)
-
+stream = TwitterStream(auth=auth_obj, secure = True)
+print "wait for tweets"
 for tweet in stream.statuses.filter(track=",".join(parameters.search)):
+    print "processing tweet"
 
     try:
-       media_url= tweet['entities']['media'][0]['media_url']
-    except (KeyError,IndexError), e:
-       media_url = None
+       user= tweet['user']['name']
+       print user + "  --  " + tweet['text']
 
-    Tweet(
-        message_text=tweet['text'],
-        message_origin=tweet['user']['name'],
-        message_avatar=tweet['user']['profile_image_url'],
-        message_media_url=media_url
-    ).save()
+       try:
+          media_url= tweet['entities']['media'][0]['media_url']
+       except (KeyError,IndexError), e:
+          media_url = None
+
+       Tweet(
+           message_text=tweet['text'],
+           message_origin=user,
+           message_avatar=tweet['user']['profile_image_url'],
+           message_media_url=media_url
+       ).save()
+
+    except (KeyError,IndexError), e:
+       print "A ghost tweets is trying to destroy us...."
 
